@@ -1,0 +1,358 @@
+/* =====================================================
+   PAGE WRAPPER
+   ===================================================== */
+
+.movie-detail-page {
+    padding: 40px 0 60px;
+    background: #f8f7fb;
+    min-height: 60vh;
+}
+
+/* =====================================================
+   EMPTY STATE (phim không tồn tại)
+   ===================================================== */
+
+.movie-detail-empty {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.movie-detail-empty h2 {
+    color: #4c1d95;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.movie-detail-empty p {
+    color: #6b6570;
+    margin-bottom: 24px;
+}
+
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 26px;
+    border-radius: 999px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #7c3aed, #c084fc);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-back-home:hover {
+    color: #ffffff;
+    filter: brightness(1.08);
+}
+
+/* =====================================================
+   CARD CHÍNH (poster + thông tin)
+   ===================================================== */
+
+.movie-detail-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(76, 29, 149, .08);
+}
+
+/* ----- Poster (cột trái) ----- */
+
+.movie-detail-poster {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    background: #1a1030;
+    overflow: hidden;
+}
+
+.movie-detail-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+}
+
+.movie-detail-genre {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: rgba(76, 29, 149, .85);
+    color: #ffffff;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+/* ----- Nội dung (cột phải) ----- */
+
+.movie-detail-content {
+    padding: 32px 36px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-detail-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.movie-detail-label {
+    margin: 0 0 4px;
+    color: #a78bfa;
+    font-size: .85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.movie-detail-title {
+    margin: 0;
+    color: #2c1a4d;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.movie-detail-status {
+    flex-shrink: 0;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-inactive {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+/* ----- Thông tin nhanh ----- */
+
+.movie-detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.movie-detail-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: #f5f3ff;
+    min-width: 140px;
+}
+
+.meta-name {
+    font-size: .78rem;
+    color: #8b7fa8;
+    font-weight: 600;
+}
+
+.meta-value {
+    font-size: 1rem;
+    color: #2c1a4d;
+    font-weight: 700;
+}
+
+/* ----- Nội dung phim ----- */
+
+.movie-detail-description {
+    margin-bottom: 28px;
+}
+
+.movie-detail-description h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c1a4d;
+    margin-bottom: 10px;
+}
+
+.movie-detail-description p {
+    color: #4b4458;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ----- Nút thao tác ----- */
+
+.movie-detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: auto;
+}
+
+.btn-book-ticket {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 999px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #f472b6, #c084fc);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-book-ticket:hover {
+    color: #ffffff;
+    filter: brightness(1.08);
+}
+
+.btn-book-ticket.btn-disabled,
+.btn-book-ticket.btn-disabled:hover {
+    background: #cbd5e1;
+    color: #64748b;
+    cursor: not-allowed;
+    filter: none;
+}
+
+.btn-back-list {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 10px 26px;
+    border: 1px solid #d8cff2;
+    border-radius: 999px;
+    color: #4c1d95;
+    background: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-back-list:hover {
+    color: #4c1d95;
+    background: #f5f3ff;
+}
+
+/* =====================================================
+   KHỐI GHI CHÚ "BẠN MUỐN ĐẶT VÉ?"
+   ===================================================== */
+
+.movie-detail-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 28px;
+    padding: 22px 25px;
+    border: 1px solid #e5def4;
+    border-radius: 16px;
+    background:
+        linear-gradient(
+            135deg,
+            #f5f3ff,
+            #faf5ff
+        );
+}
+
+.movie-detail-note h3 {
+    margin-bottom: 6px;
+    color: #4c1d95;
+    font-size: 1.15rem;
+    font-weight: 750;
+}
+
+.movie-detail-note p {
+    margin: 0;
+    color: #6b6570;
+}
+
+.btn-note-showtime {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    color: #ffffff;
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #c084fc
+        );
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.btn-note-showtime:hover {
+    color: #ffffff;
+    filter: brightness(1.08);
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+    color: #ffffff;
+    background: #adb5bd;
+    cursor: not-allowed;
+    filter: none;
+    transform: none;
+}
+
+.empty-icon {
+    margin-bottom: 13px;
+    font-size: 3rem;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .movie-detail-poster,
+    .movie-detail-poster img {
+        min-height: 320px;
+    }
+
+    .movie-detail-content {
+        padding: 26px 24px;
+    }
+
+    .movie-detail-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .movie-detail-note {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .btn-note-showtime {
+        width: 100%;
+    }
+
+    .movie-detail-actions {
+        flex-direction: column;
+    }
+
+    .btn-book-ticket,
+    .btn-back-list {
+        width: 100%;
+    }
+}

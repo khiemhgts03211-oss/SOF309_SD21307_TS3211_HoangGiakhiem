@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+.booking-success-page {
+    min-height: 80vh;
+    padding: 50px 0 70px;
+    background: #f6f7fa;
+}
+
+.booking-success-page .container {
+    width: min(760px, calc(100% - 30px));
+    margin: 0 auto;
+}
+
+.booking-success-card {
+    padding: 36px;
+    background: #fff;
+    border: 1px solid #e3e4e9;
+    border-radius: 18px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #e4f7ea;
+    color: #16823d;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.success-label {
+    margin: 0 0 5px;
+    color: #7425ca;
+    font-weight: 700;
+}
+
+.booking-success-card h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.success-description {
+    margin: 10px auto 25px;
+    color: #70727a;
+}
+
+.booking-code-box {
+    padding: 18px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    background: #f2ebfb;
+}
+
+.booking-code-box span {
+    display: block;
+    color: #6d6f76;
+    font-size: 13px;
+}
+
+.booking-code-box strong {
+    display: block;
+    margin-top: 5px;
+    color: #7022c4;
+    font-size: 22px;
+}
+
+.success-information,
+.success-payment-summary {
+    text-align: left;
+}
+
+.success-row,
+.success-payment-summary > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ededf1;
+}
+
+.success-row span,
+.success-payment-summary span {
+    color: #72747b;
+}
+
+.status-booked {
+    color: #198644;
+}
+
+.success-payment-summary {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    background: #f8f8fa;
+}
+
+.success-grand-total {
+    border-bottom: 0 !important;
+    margin-top: 7px;
+    padding-top: 16px !important;
+}
+
+.success-grand-total strong {
+    color: #7223ca;
+    font-size: 21px;
+}
+
+.success-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn-success-primary,
+.btn-success-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 10px 18px;
+    border-radius: 9px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-success-primary {
+    background: linear-gradient(90deg, #6b1cc8, #a35de4);
+    color: #fff;
+}
+
+.btn-success-outline {
+    border: 1px solid #7324ca;
+    background: #fff;
+    color: #7324ca;
+}
+
+@media (max-width: 576px) {
+
+    .booking-success-card {
+        padding: 24px 18px;
+    }
+
+    .booking-success-card h1 {
+        font-size: 27px;
+    }
+
+    .success-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .success-row,
+    .success-payment-summary > div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

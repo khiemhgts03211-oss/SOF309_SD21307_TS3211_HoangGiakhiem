@@ -1,0 +1,129 @@
+:root {
+    --primary-color: #6a11cb; /* Màu tím */
+    --secondary-color: #2575fc; /* Màu xanh */
+    --bg-color: #ffffff; /* Trắng */
+    --text-color: #333333;
+    --sidebar-width: 250px;
+}
+
+body {
+    font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: var(--text-color);
+}
+
+/* Sidebar & Navbar - tông tím */
+
+.sidebar.bg-dark {
+    background: linear-gradient(180deg, var(--primary-color), #A78BFA) !important;
+    width: var(--sidebar-width);
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: .25s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: rgba(255, 255, 255, .18);
+    color: #ffffff;
+}
+
+.navbar.bg-dark {
+    background: linear-gradient(90deg, #4c1d95, #C084FC, #F9A8D4) !important;
+}
+
+.sidebar {
+    padding-top: 8px;
+}
+
+.sidebar .nav-link {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar .nav-link.active {
+    border-left: 4px solid #F9A8D4;
+    padding-left: 12px;
+    font-weight: 600;
+}
+
+/* Nút chính (Search, Filter, Sort...) đổi sang gradient tím-hồng */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #C084FC) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    transition: .2s;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.btn-success, .btn-warning, .btn-danger, .btn-info {
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+/* Card & bảng mềm mại hơn */
+.card {
+    border-radius: 18px !important;
+    
+    overflow: hidden;
+}
+
+.card-header.bg-dark {
+    background: linear-gradient(90deg, var(--primary-color), #A78BFA) !important;
+}
+
+.table thead.table-dark {
+    background: #4c1d95 !important;
+}
+
+.table-hover tbody tr:hover {
+    background: rgba(167, 139, 250, .08);
+}
+
+.badge.bg-success {
+    background: #22c55e !important;
+    border-radius: 999px;
+    padding: 6px 12px;
+}
+
+.badge.bg-danger {
+    background: #f43f5e !important;
+    border-radius: 999px;
+    padding: 6px 12px;
+}
+
+/* Form input bo góc mềm */
+.form-control, .form-select {
+    border-radius: 10px !important;
+}
+
+/* Phân trang */
+.pagination .page-link {
+    border-radius: 8px !important;
+    margin: 0 3px;
+    border: none;
+    color: var(--primary-color);
+}
+
+.pagination .page-item.active .page-link {
+    background: linear-gradient(135deg, var(--primary-color), #C084FC) !important;
+    border: none;
+}
+
+.sidebar.bg-dark {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+}

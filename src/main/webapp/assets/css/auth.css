@@ -1,0 +1,539 @@
+/* =========================================
+   AUTH PAGE - MOVIE TICKET MANAGEMENT
+   Font: Quicksand
+========================================= */
+
+
+/* ===============================
+   RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html,
+body{
+
+    width:100%;
+    min-height:100%;
+
+    font-family:'Quicksand',sans-serif;
+
+}
+
+
+/* ===============================
+   BACKGROUND
+================================ */
+
+body.login-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(255,174,214,.85),
+        rgba(167,139,250,.9)
+    ),
+
+    url("../images/login-bg.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+
+
+/* ===============================
+   OVERLAY
+================================ */
+
+.login-overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+
+
+/* ===============================
+   CARD
+================================ */
+
+.login-card{
+
+
+    width:100%;
+
+    max-width:480px;
+
+
+    padding:40px;
+
+
+    background:
+
+    rgba(255,255,255,.35);
+
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+
+    border-radius:28px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.5);
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.18);
+
+
+    animation:
+
+    authShow .7s ease;
+
+
+}
+
+
+
+/* hover */
+
+.login-card:hover{
+
+    transform:translateY(-5px);
+
+    transition:.35s;
+
+}
+
+
+
+/* ===============================
+   LOGO
+================================ */
+
+
+.login-logo{
+
+
+    width:90px;
+
+
+    display:block;
+
+
+    margin:
+
+    0 auto 20px;
+
+
+    filter:
+
+    drop-shadow(
+        0 5px 15px rgba(255,255,255,.7)
+    );
+
+
+}
+
+
+
+/* ===============================
+   TITLE
+================================ */
+
+
+.login-card h2{
+
+
+    text-align:center;
+
+
+    color:#6D28D9;
+
+
+    font-size:36px;
+
+
+    font-weight:700;
+
+
+    letter-spacing:.3px;
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+.login-card p{
+
+
+    text-align:center;
+
+
+    color:#7C3AED;
+
+
+    font-size:15px;
+
+
+    font-weight:500;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+/* ===============================
+   LABEL
+================================ */
+
+
+.login-card label{
+
+
+    color:#4C1D95;
+
+
+    font-size:15px;
+
+
+    font-weight:600;
+
+
+    margin-bottom:7px;
+
+
+}
+
+
+
+/* ===============================
+   INPUT
+================================ */
+
+
+.form-control{
+
+
+    height:48px;
+
+
+    border-radius:14px;
+
+
+    border:none;
+
+
+    background:
+
+    rgba(255,255,255,.75);
+
+
+    color:#333;
+
+
+    font-family:'Quicksand',sans-serif;
+
+
+    font-size:15px;
+
+
+    font-weight:500;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.form-control::placeholder{
+
+
+    color:#999;
+
+
+}
+
+
+
+.form-control:focus{
+
+
+    background:white;
+
+
+    border:
+
+    2px solid #A855F7;
+
+
+    box-shadow:
+
+    0 0 15px rgba(168,85,247,.35);
+
+
+}
+
+
+
+/* ===============================
+   BUTTON
+================================ */
+
+
+.btn-primary{
+
+
+    width:100%;
+
+
+    height:50px;
+
+
+    border:none;
+
+
+    border-radius:15px;
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #8B5CF6,
+        #C084FC
+    );
+
+
+    color:white;
+
+
+    font-family:'Quicksand',sans-serif;
+
+
+    font-size:17px;
+
+
+    font-weight:700;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.btn-primary:hover{
+
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #7C3AED,
+        #A855F7
+    );
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(124,58,237,.35);
+
+
+}
+
+
+
+/* ===============================
+   LINK
+================================ */
+
+
+.login-card a{
+
+
+    color:#6D28D9;
+
+
+    text-decoration:none;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+.login-card a:hover{
+
+
+    color:#4C1D95;
+
+
+    text-decoration:underline;
+
+
+}
+
+
+
+/* ===============================
+   VALIDATION
+================================ */
+
+
+.invalid-feedback{
+
+
+    font-size:13px;
+
+
+    font-weight:500;
+
+
+}
+
+
+
+/* ===============================
+   HR
+================================ */
+
+
+.login-card hr{
+
+
+    border-color:
+
+    rgba(109,40,217,.25);
+
+
+}
+
+
+
+/* ===============================
+   ANIMATION
+================================ */
+
+
+@keyframes authShow{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:
+
+        translateY(40px);
+
+
+    }
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:
+
+        translateY(0);
+
+
+    }
+
+}
+
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+
+@media(max-width:768px){
+
+
+    .login-overlay{
+
+        padding:20px;
+
+    }
+
+
+    .login-card{
+
+
+        padding:30px 25px;
+
+
+    }
+
+
+
+    .login-card h2{
+
+
+        font-size:30px;
+
+
+    }
+
+
+}

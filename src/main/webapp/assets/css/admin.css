@@ -1,0 +1,90 @@
+body{
+    background:#f4f6f9;
+}
+ 
+.card{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+ 
+.card h2{
+    font-weight:bold;
+}
+ 
+canvas{
+    width:100% !important;
+    height:350px !important;
+}
+ 
+.table-responsive{
+    overflow-x:auto;
+}
+ 
+/* ===== Sidebar: submenu hiện khi rê chuột ===== */
+.sidebar-group{
+    position:relative;
+}
+ 
+.sidebar-submenu{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:max-height .3s ease, opacity .25s ease;
+}
+ 
+.sidebar-group:hover .sidebar-submenu{
+    max-height:200px;
+    opacity:1;
+}
+ 
+.sidebar-submenu .nav-link{
+    padding-left:2.5rem;
+    font-size:.92rem;
+}
+ 
+@media (max-width:992px){
+ 
+    h2{
+        font-size:28px;
+    }
+ 
+    canvas{
+        height:300px !important;
+    }
+ 
+}
+ 
+@media (max-width:768px){
+ 
+    h2{
+        text-align:center;
+        font-size:24px;
+    }
+ 
+    .card{
+        margin-bottom:15px;
+    }
+ 
+    canvas{
+        height:250px !important;
+    }
+ 
+}
+ 
+@media (max-width:576px){
+ 
+    h2{
+        font-size:22px;
+    }
+ 
+    .card h2{
+        font-size:26px;
+    }
+ 
+    canvas{
+        height:220px !important;
+    }
+ 
+}
+ 
