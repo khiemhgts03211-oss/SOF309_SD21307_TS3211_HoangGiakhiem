@@ -1,12 +1,20 @@
-# Kế hoạch kiểm thử tuần 1
-Hoàng Gia Khiêm · TS03211 · SD21307
+# Kế hoạch kiểm thử MovieTicketManagement
 
-Phạm vi: đăng ký, đăng nhập và CRUD danh mục dịch vụ. Kiểm tra controller/service và giao diện. Thanh toán, OTP, đặt ghế, thống kê chuyên sâu ngoài phạm vi.
+Hoàng Gia Khiêm · TS03211 · SD21307. Lịch đề xuất cập nhật Tuần 1 và 2 vào 15/11/2026.
 
-Môi trường: JDK 17, Eclipse Enterprise, Tomcat 10.1/11, SQL Server với MovieTicketManagement đầy đủ. Chuẩn bị một ADMIN, STAFF, CUSTOMER, tài khoản khóa; lấy từ dữ liệu của tác giả. Dùng tên đăng nhập/email mới và danh mục QA-TS03211 chưa được sử dụng.
+| Nhân lực | Thời hạn | Ngày bắt đầu | Ngày bàn giao | Phương thức | Phạm vi và nhiệm vụ |
+|---|---|---|---|---|---|
+| Hoàng Gia Khiêm | Buổi cập nhật | 15/11/2026 | 15/11/2026 | Đọc mã và tài liệu | Đối chiếu đăng ký, đăng nhập và CRUD danh mục dịch vụ với đặc tả. |
+| Hoàng Gia Khiêm | Buổi cập nhật | 15/11/2026 | 15/11/2026 | JUnit 5 và Mockito | Thực thi 51 ca UT_001–UT_051. Biên username 3/4/5 và 19/20/21, mật khẩu đăng ký 7/8/9, điện thoại tùy chọn, giới hạn đăng nhập và quyền. |
+| Hoàng Gia Khiêm | Khi có SQL Server thử | 15/11/2026 | Cập nhật sau khi chạy | Eclipse/Tomcat, trình duyệt, HTTP | Chạy 40 ca TC001–TC040. Kiểm tra phản hồi, quyền và bản ghi DB. |
+| Hoàng Gia Khiêm | Sau khi kiểm tra | 15/11/2026 | 15/11/2026 | Maven và GitHub | Lưu report Surefire, cập nhật trạng thái thực tế và nộp link commit cá nhân. |
 
-Phương pháp: phân vùng dữ liệu rỗng/trùng/sai định dạng/hợp lệ; giá trị biên username 3/4/5/19/20/21 và mật khẩu 7/8/9. So sánh trước/sau DB để bắt hồi quy lỗi đăng ký lưu trước validation. Với điện thoại dùng số nội địa và tiền tố 84 theo regex thực tế.
+| Điều kiện | Tiêu chí |
+|---|---|
+| Bắt đầu JUnit | JDK 21, Maven, JUnit 5 và Mockito. Chuẩn bị được dependencies. |
+| Bắt đầu ca web | Tomcat tương thích Servlet, SQL Server thử, dữ liệu nền và tài khoản đúng vai trò. Xem SPECIFICATIONS.md. |
+| Tạm dừng | Ghi lỗi môi trường hoặc dữ liệu thiếu. Khi xử lý xong, chạy lại ca bị ảnh hưởng. |
+| Hoàn thành JUnit | 51 ca, 0 failures, 0 errors, 0 skipped. Giữ báo cáo Maven. |
+| Hoàn thành web | Ghi Actual Result cho 40 ca. Với sai khác, ghi ID, dữ liệu, bước tái hiện và bằng chứng. |
 
-Thực thi: ca UI thao tác trên web; ca controller gửi request có session và dữ liệu tương ứng hoặc triển khai test tự động tuần 2. Ghi ảnh/log khi lỗi và kết quả thực tế. Tất cả ca ban đầu Chưa chạy.
-Y1 đạt khi web khởi động và ba luồng chính thành công. Bộ tài liệu Y2 cần được sinh viên rà soát theo database thật.
-Giới hạn kiểm chứng: ZIP không kèm SQL và môi trường này chưa build/chạy Tomcat hoặc SQL Server.
+JUnit xác nhận phản hồi HTTP, session và lời gọi DAO/service tại Controller. Các ca ngoại lệ ghi hành vi hiện tại để theo dõi. Kiểm tra ghi dữ liệu, JSP, filter và upload thực hiện với Tomcat và SQL Server thử.

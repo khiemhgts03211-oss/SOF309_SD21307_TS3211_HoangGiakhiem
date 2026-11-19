@@ -1,0 +1,4 @@
+﻿Run time: 2026-11-19T22:17:06.6005611+07:00
+Tests run: 51, Failures: 0, Errors: 0, Skipped: 0
+Command: mvn clean test -Dtest=MovieAuthControllerTest,MovieCategoryControllerTest
+BUILD SUCCESS

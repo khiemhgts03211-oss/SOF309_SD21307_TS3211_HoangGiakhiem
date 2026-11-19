@@ -33,3 +33,7 @@ Session hết hạn sau 30 phút không hoạt động.
 
 Tên danh mục bắt buộc ở UI; service hiện chưa kiểm tra chuỗi rỗng. Update chưa kiểm tra trùng tên như create. Các ca này là điểm khảo sát chất lượng.
 ID sai kiểu có nguy cơ NumberFormatException; cần ghi lỗi thực tế. Dùng tài khoản ADMIN để demo CRUD.
+
+
+## Phạm vi JUnit Tuần 2
+Bộ test gọi các Controller thật với DAO/service giả lập. Có 51 lượt JUnit cho đăng ký, đăng nhập và CRUD danh mục dịch vụ. Xem từng trường hợp trong TEST_CASES.md.

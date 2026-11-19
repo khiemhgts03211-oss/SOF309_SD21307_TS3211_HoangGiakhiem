@@ -8,3 +8,6 @@ Prompt tái sử dụng: Bạn là QA Lead. Dựa trên SPECIFICATIONS.md, dùng
 
 Kết quả: tạo ba tài liệu và bảng ca. Sửa RegisterServlet đưa validation lên trước userService.save. Gộp JUnit/Selenium, cấu hình WAR/Surefire. Chuyển mật khẩu DB/SMTP sang biến môi trường và bỏ log mật khẩu SQL.
 Giới hạn: thiếu script SQL và dữ liệu admin, cần tác giả cung cấp/dùng DB hiện có. Sinh viên cần chạy và ghi kết quả thật. MSSV tạm dùng TS03211 theo email, repo đang ghi TS3211.
+
+
+Cập nhật 15/11/2026. Lập lại Test Plan theo lịch, nhãn trách nhiệm và tiêu chí. Mỗi Test Case có tiền điều kiện, bước thực hiện, dữ liệu và mong đợi theo mã của dự án.
